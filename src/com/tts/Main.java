@@ -5,6 +5,9 @@ import java.util.Scanner;
 public class Main {
 
 
+    private static final int MAX_MAGIC = 75;
+    private static final int MAX_BALL = 60;
+
     public static void main(String[] args) {
 
 
@@ -81,11 +84,21 @@ public class Main {
             response = kb.nextLine();
             System.out.println("Ah yes, good ol '" + modelYear + ", the best year for those models!");
 
-
             // Question: Favorite Actor
-
+            System.out.println("Who is your favorite actor or actress? (name): ");
+            String favActor = kb.nextLine();
+            System.out.println("Oh you know " + favActor + "? I thought they were pretty underground.");
 
             // Question: Random Number 1-50
+            System.out.println("Enter any random number between 0 and 50! (0-50): ");
+            int randoNumber = kb.nextInt();
+            System.out.println("Wow, " + randoNumber + ", so random!");
+
+
+            // Generate the lotto numbers!
+            int ball_magic = 0;
+
+
 
 
             System.out.println("Do you want to play again? (Y/N): ");
