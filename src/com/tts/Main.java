@@ -38,11 +38,10 @@ public class Main {
         response = kb.nextLine();
 
         keepGoing = (response.equalsIgnoreCase("y") || response.equalsIgnoreCase("yes"));
-        System.out.println("Will we keep going: " + keepGoing);
+//        System.out.println("Will we keep going: " + keepGoing);  // For debugging
 
 
         while (keepGoing) {
-
             System.out.println("Let's generate some numbers!");
 
             // Question: Red Car
@@ -110,7 +109,6 @@ public class Main {
             System.out.println("Wow, " + randoNumber + ", so random!");
             // TODO: Check Input - Random Number
 
-
             // Generate the lotto numbers!
             int ball_magic = 0;
             int rando_magic = (int) Math.floor(Math.random() * MAX_MAGIC) + 1;
@@ -159,28 +157,25 @@ public class Main {
             finalPetAgeAndModelYear = reduceNormal(finalPetAgeAndModelYear);
             resultHopper.add(finalPetAgeAndModelYear);
 
-
             // Final Fav QB + Pet Age + Lucky Num Result
             int finalQBAndPetAgeAndLuckyNum = jerseyNum + petAge + luckyNumber;
             finalQBAndPetAgeAndLuckyNum = reduceNormal(finalQBAndPetAgeAndLuckyNum);
             resultHopper.add(finalQBAndPetAgeAndLuckyNum);
 
-
-
             // Select BALL_PULL results
             int[] yourResults = new int[BALL_PULL];
             for (int i = 0; i < BALL_PULL; i++) {
-                int randomPull = (int)Math.floor(Math.random()*resultHopper.size());
-                yourResults[i]=resultHopper.get(randomPull);
+                int randomPull = (int) Math.floor(Math.random() * resultHopper.size());
+                yourResults[i] = resultHopper.get(randomPull);
                 resultHopper.remove(randomPull);
             }
 
             // Print the final results!
             System.out.print("\n\nYour lottery numbers: ");
-            for (int i=0;i<BALL_PULL;i++
-                 ) {
+            for (int i = 0; i < BALL_PULL; i++
+            ) {
                 System.out.print(yourResults[i]);
-                if (i<BALL_PULL-1) System.out.print(",");
+                if (i < BALL_PULL - 1) System.out.print(",");
                 System.out.print(" ");
             }
             System.out.print("Magic Ball: " + finalMagicBall + "\n\n");
