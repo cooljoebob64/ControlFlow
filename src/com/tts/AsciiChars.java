@@ -19,7 +19,7 @@ public class AsciiChars {
     }
 
     public static void printUpperCase(){
-        System.out.println("Valid lowercase inputs:");
+        System.out.println("Valid uppercase inputs:");
         for(int i=65;i<=90;i++){
             System.out.print((char)i);
         }
